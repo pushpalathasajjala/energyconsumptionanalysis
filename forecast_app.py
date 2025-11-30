@@ -27,7 +27,7 @@ if uploaded_file is not None:
 
             if selected_column:
                 fig, ax = plt.subplots(figsize=(10, 5))
-                sns.lineplot(data=df, y=selected_column, ax=ax)
+                sns.lineplot(x=df.index, y=df[selected_column], ax=ax)
                 ax.set_title(f"Trend of {selected_column}")
                 ax.set_xlabel("Index")
                 ax.set_ylabel(selected_column)
